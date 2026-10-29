@@ -1,0 +1,87 @@
+---
+import "../styles/global.css";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "José Armando Granados Martínez",
+  jobTitle: "Ingeniero de Software",
+  email: "mailto:granadosjose7j@gmail.com",
+  telephone: "+527721554599",
+  url: "https://github.com/JoseGranados7",
+  sameAs: [
+    "https://github.com/JoseGranados7",
+    "https://www.linkedin.com/in/jos%C3%A9-armando-granados-mart%C3%ADnez-6b3968294/",
+  ],
+  address: {
+    "@type": "PostalAddress",
+    addressRegion: "Hidalgo",
+    addressCountry: "MX",
+  },
+  alumniOf: {
+    "@type": "CollegeOrUniversity",
+    name: "Universidad Autónoma del Estado de Hidalgo",
+  },
+  knowsAbout: ["C#", ".NET", "ASP.NET", "SQL Server", "JavaScript", "Flutter", "Astro"],
+};
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>José Granados — Ingeniero de Software .NET</title>
+    <meta
+      name="description"
+      content="Portafolio y CV de José Armando Granados Martínez, Ingeniero de Software especializado en .NET, C#, SQL Server y desarrollo Full Stack. Poder Judicial del Estado de Hidalgo."
+    />
+    <meta name="author" content="José Armando Granados Martínez" />
+    <meta name="theme-color" content="#08090c" />
+    <meta name="generator" content={Astro.generator} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_MX" />
+    <meta property="og:site_name" content="José Granados — Portafolio" />
+    <meta property="og:title" content="José Granados — Ingeniero de Software .NET" />
+    <meta
+      property="og:description"
+      content="Desarrollador Full Stack .NET. Aplicaciones web, SQL Server y software que resuelve problemas reales."
+    />
+    <meta property="og:image" content="assets/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="José Granados — Ingeniero de Software .NET" />
+    <meta
+      name="twitter:description"
+      content="Desarrollador Full Stack .NET. Aplicaciones web, SQL Server y software que resuelve problemas reales."
+    />
+    <meta name="twitter:image" content="assets/og.png" />
+
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="assets/avatar.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <noscript>
+      <style>
+        .reveal {
+          opacity: 1;
+          transform: none;
+        }
+      </style>
+    </noscript>
+
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(schema)} />
+  </head>
+  <body>
+    <slot />
+    <script>
+      import "../scripts/main.js";
+    </script>
+  </body>
+</html>
